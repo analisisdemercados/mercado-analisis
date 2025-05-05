@@ -5,13 +5,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Estudios de Mercado - Profesional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0; padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
       background-color: #f8f9fa;
       color: #333;
+      scroll-behavior: smooth;
     }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     header.hero {
       background-image: url('https://img.freepik.com/free-vector/abstract-luxury-black-background-with-golden-line_2774117.jpg');
       background-size: cover;
@@ -19,39 +32,55 @@
       color: white;
       text-align: center;
       padding: 5rem 2rem;
+      position: relative;
     }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      max-height: 60px;
+    }
+
     header.hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
+
     header.hero p {
       font-size: 1.3rem;
       max-width: 700px;
       margin: auto;
     }
+
     nav {
       background-color: #0d6efd;
       text-align: center;
       padding: 1rem 0;
     }
+
     nav a {
       color: white;
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
     }
+
     section {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
       color: #0d6efd;
     }
+
     ul {
       list-style-type: square;
       padding-left: 1.5rem;
     }
+
     footer {
       background-color: #212529;
       color: white;
@@ -59,6 +88,7 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+
     form input, form textarea {
       width: 100%;
       padding: 0.7rem;
@@ -66,6 +96,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
     form button {
       background-color: #0d6efd;
       color: white;
@@ -75,36 +106,55 @@
       border-radius: 4px;
       font-size: 1rem;
     }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .image-grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
 
-  <header class="hero">
+  <header class="hero fade-in">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Market_analysis_icon.svg/1024px-Market_analysis_icon.svg.png" alt="Logo" class="logo">
     <h1>Estudios de Mercado</h1>
     <p>Descubre tu posición competitiva y valida nuevos productos con datos reales. Análisis a medida para decisiones inteligentes.</p>
   </header>
 
-  <nav>
+  <nav class="fade-in">
     <a href="#servicios">Servicios</a>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <section id="servicios">
+  <section id="servicios" class="fade-in">
     <h2>Servicios</h2>
     <ul>
       <li><strong>Análisis de posicionamiento:</strong> descubre cómo se percibe tu empresa frente a la competencia.</li>
       <li><strong>Estudios de viabilidad:</strong> conoce si un nuevo producto tiene cabida en el mercado antes de lanzarlo.</li>
       <li><strong>Segmentación de clientes:</strong> identifica y comprende a tu público objetivo.</li>
     </ul>
+    <div class="image-grid">
+      <img src="https://img.freepik.com/free-photo/business-analysis-graphs_53876-125210.jpg" alt="Gráfico 1">
+      <img src="https://img.freepik.com/free-photo/marketing-strategy-planning-strategy-concept_53876-42950.jpg" alt="Gráfico 2">
+      <img src="https://img.freepik.com/free-photo/modern-business-people-working-tablet-office_53876-104072.jpg" alt="Consultoría">
+    </div>
   </section>
 
-  <section id="sobre-mi">
+  <section id="sobre-mi" class="fade-in">
     <h2>Sobre mí</h2>
     <p>Soy un analista de mercado con experiencia en estudios de posicionamiento, viabilidad de productos y análisis competitivo. Trabajo contigo para ayudarte a tomar decisiones basadas en datos y minimizar riesgos al lanzar o adaptar tus productos.</p>
   </section>
 
-  <section id="contacto">
+  <section id="contacto" class="fade-in">
     <h2>Contacto</h2>
     <form action="https://formspree.io/f/xvgaazyy" method="POST">
       <label>Nombre:</label>
@@ -117,7 +167,7 @@
     </form>
   </section>
 
-  <footer>
+  <footer class="fade-in">
     <p>© 2025 Estudios de Mercado - Todos los derechos reservados</p>
   </footer>
 
