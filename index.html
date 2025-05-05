@@ -4,22 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Estudios de Mercado - Tu Empresa</title>
+  <title>Estudios de Mercado - Profesional</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0; padding: 0;
       background-color: #f8f9fa;
       color: #333;
     }
-    header {
-      background-color: #0d6efd;
+    header.hero {
+      background-image: url('https://img.freepik.com/free-vector/abstract-luxury-black-background-with-golden-line_2774117.jpg');
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 5rem 2rem;
+    }
+    header.hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header.hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: auto;
     }
     nav {
-      background-color: #0056b3;
+      background-color: #0d6efd;
       text-align: center;
       padding: 1rem 0;
     }
@@ -31,8 +42,15 @@
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+    }
+    h2 {
+      color: #0d6efd;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
     }
     footer {
       background-color: #212529;
@@ -43,23 +61,27 @@
     }
     form input, form textarea {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.7rem;
       margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
     form button {
       background-color: #0d6efd;
       color: white;
-      padding: 0.7rem 1.5rem;
+      padding: 0.8rem 1.5rem;
       border: none;
       cursor: pointer;
+      border-radius: 4px;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <header class="hero">
     <h1>Estudios de Mercado</h1>
-    <p>Conoce tu posición en el mercado y valida nuevos productos con información real</p>
+    <p>Descubre tu posición competitiva y valida nuevos productos con datos reales. Análisis a medida para decisiones inteligentes.</p>
   </header>
 
   <nav>
